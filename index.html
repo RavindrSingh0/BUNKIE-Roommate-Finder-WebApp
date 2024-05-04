@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Finder - Sign Up & Login</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body> 
+    <header>
+        <div class="header-content">
+            <h1 class="web-name">BUNKIE</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#about-us">How It Works</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-section" id="home">
+        <div class="signup-login-section">
+            <div class="content">
+                <h2 class="main-heading">Find Your Perfect<br> Roommate</h2>
+                <p class="main-paragraph">A platform to find your ideal roommates based on your lifestyle preferences.</p>
+                <div class="button-container">
+                    <button id="get-started-btn" class="popup-btn">Get Started</button>
+                </div><br>
+                <div class="login-link-container">
+                    <p>Already have an account? <a href="#" id="login-link" class="login-link">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup1" id="signup-popup">
+            <span class="close-btn" id="close-signup-popup">&times;</span>
+            <div class="form-wrapper">
+                <h2>Sign Up</h2>
+                <form id="signup-form" action="signup.php" method="POST">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="registration_no" placeholder="Registration No." required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="email" name="outlook_id" placeholder="OutLook ID" required>
+                    <input type="text" name="mob_no" placeholder="Mobile No." required>
+                    <input type="date" name="dob" placeholder="Date of Birth" required>
+                    <label for="course">Select a Course:</label>
+                    <select id="course" name="course" onchange="populateBranches()" required>
+                        <option value="" disabled selected>Select a Course</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="bba">BBA</option>
+                        <option value="ba">BA</option>
+                        <option value="llb">LLB</option>
+                    </select>
+
+                    <label for="branch">Select a Branch:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="" disabled selected>Select a Course First</option>
+                    </select>
+                    <label for="year">Year of Study:</label>
+                    <select name="year" id="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select><br>
+                    <label for="smoking">Smoking:</label>
+                    <input type="checkbox" id="smoking" name="smoking"><br>
+                    <label for="alcoholic">Alcoholic:</label>
+                    <input type="checkbox" id="alcoholic" name="alcoholic"><br>
+                    <label for="nightowl">Night Owl:</label>
+                    <input type="radio" name="nightowl" id="nightowl-yes" value="yes" required><label for="nightowl-yes">Yes</label>
+                    <input type="radio" name="nightowl" id="nightowl-no" value="no"><label for="nightowl-no">No</label>
+                    <br>
+                    <label for="physically_active">Physically Active:</label>
+                    <input type="radio" name="physically_active" id="physically-active-yes" value="yes" required>
+                    <label for="physically-active-yes">Yes</label>
+                    <input type="radio" name="physically_active" id="physically-active-no" value="no">
+                    <label for="physically-active-no">No</label><br>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup2" id="login-popup">
+            <span class="close-btn" id="close-login-popup">&times;</span>
+            <div class="form-wrapper">
+                <h2>Login</h2>
+                <form id="login-form" action="login.php" method="POST">
+                    <input type="text" name="registration_no" placeholder="Registration No." required>
+                    <input type="date" name="dob" placeholder="Date of Birth" required><br>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="why-choose-us" id="about-us">
+        <h2 class="section-heading">Why Choosing Us</h2>
+        <p> We make finding your ideal roommate easy and hassle-free</p><br>
+        <div class="features">
+            <div class="feature">
+                <img src="C:\xampp\htdocs\newROOMIE\logo_1.jpg" alt="Detailed Profiles Logo" class="feature-logo1">
+                <h3 class="feature-heading">Detailed Profiles</h3>
+                <p>Spill the tea on your ideal living situation! Are you a neat freak seeking a fellow organizational wiz, or a night owl hoping to find a partner-in-crime for late-night adventures? Spill the beans and find your perfect match!</p>
+                <a href="#" class="learn-more-link">Learn more</a>
+            </div>
+            <div class="feature">
+                <img src="C:\xampp\htdocs\newROOMIE\logo_2.png" alt="Matchmaking Logo" class="feature-logo2">
+                <h3 class="feature-heading">Matchmaking</h3>
+                <p>Ditch the roommate roulette and let us do the heavy lifting!  Our system will match you with someone who (hopefully) won't steal your pizza or blast heavy metal at 3 AM.</p>
+                <a href="#" class="learn-more-link">Learn more</a>
+            </div>
+        </div>
+        <div class="signup-button-container">
+            <a href="#" class="signup-button">Sign Up Now</a>
+        </div>
+    </section>
+    <section class="user-testimonials">
+        <h2 class="section-heading">What Our Users Say</h2>
+        <p>Hear from students who found their perfect roommates through Roommate Finder.</p>
+        <div class="comments-container">
+            <pre>          <p class="comment">                            "Cleanliness is important to me too, sounds like a match!"- AMIT SHAH          "Looking forward to learning more about you!"- NARENDER MODI</p></pre>
+        </div>
+        <a href="#" class="leave-comment-button">LEAVE COMMENT</a>
+    </section>
+
+    <section class="faq">
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+        <p>Got questions? We've got answers.</p>
+        <a href="#" class="contact-us-button">Contact Us</a>
+    </section>
+
+    <section class="ready-to-find">
+        <h2 class="section-heading">Ready to Find Your Perfect Roommate?</h2>
+        <p>Sign up now and start matching with potential roommates.</p>
+        <a href="#" class="signup-button">SIGN UP</a>
+    </section>
+
+    <section class="footer">
+        <div class="copyright">
+            <p>© 2024 BUNKIE. All rights reserved.</p>
+        </div>
+        <div class="social-media">
+            <p>Follow us:</p>
+            <a href="#" class="social-media-link">Facebook</a>
+            <a href="#" class="social-media-link">Twitter</a>
+            <a href="#" class="social-media-link">Instagram</a>
+        </div>
+        <div class="contact-details">
+            <a href="#" class="signup-button">Sign Up</a>
+            <p id="contact-us">Contact: roommatefinder@help.com</p>
+        </div>
+    </section>
+    <!-- Matches Tab -->
+    <section id="matches" class="tab-content">
+        <h2 class="section-heading">Your Best Matches</h2>
+        <div id="matches-container" class="matches-container">
+            <!-- Placeholder for displaying matches -->
+        </div>
+    </section>
+
+    <script src="scripts2.js"></script>
+</body>
+
+</html>
