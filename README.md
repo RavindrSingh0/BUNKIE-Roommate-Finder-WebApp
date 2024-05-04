@@ -5,7 +5,6 @@ Files Included:
 index.html: The main webpage of the Roommate Finder application, providing information and navigation options.
 
 logo_1.jpg and logo_2.png: Logo files used for branding and visual identity(make changes according to your preference).
-
 matches.php: The Matches page, where users can view their best roommate matches.
 roommate_finder.sql: SQL file containing the database schema for storing user data.
 scripts2.js: JavaScript file containing client-side logic for interactive features.
