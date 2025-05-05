@@ -8,10 +8,10 @@ BUNKIE is a web application designed to help users find their ideal roommates ba
     - Web pages for signup, login, and the main interface.
     - Backend functionality for user registration and login.
     - Database setup for storing user data.
-        
-- **Ongoing Development**:
     - Implementation of the matching algorithm to suggest compatible roommates.
     - Enhancement of responsiveness to ensure compatibility with different screen sizes.
+        
+- **Ongoing Development**:
     - Inclusion of accommodation options (e.g., PGs, flats, hostels) and flatmates for a comprehensive roommate-finding experience.
 
 ## Features
